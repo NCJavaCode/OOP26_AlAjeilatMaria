@@ -1,10 +1,10 @@
-//реалізація принципу інкапсуляції
-public class Student {
+// реалізація принципу спадкування
+public abstract class Student {
 
     //поля класу
-    private String name;
-    private int age;
-    private String speciatly;
+    protected String name;
+    protected int age;
+    protected String speciatly;
 
     //конструктор
     public Student(String name, int age, String speciatly) {
@@ -42,10 +42,6 @@ public class Student {
         return speciatly;
     }
 
-    //метод виведення інформації про студента
-    public void showInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Specialty: " + speciatly);
-    }
+    //абстрактний метод
+    public abstract void showInfo();
 }
