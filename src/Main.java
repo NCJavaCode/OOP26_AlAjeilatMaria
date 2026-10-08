@@ -2,22 +2,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        ITStudent itStudent = new ITStudent(
-                "Maria",
+        Student student = new ITStudent(
+                "Марія",
                 18,
                 "Інженерія програмного забезпечення"
         );
 
-        DesignStudent designStudent = new DesignStudent(
-                "Anna",
-                19,
-                "Дизайн"
-        );
+        student.showInfo();
 
-        itStudent.showInfo();
+        student.showInfo("Програмування");
 
-        System.out.println();
-
-        designStudent.showInfo();
+        student.showInfo("Програмування", 85);
     }
 }
