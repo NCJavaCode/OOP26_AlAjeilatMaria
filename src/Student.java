@@ -1,34 +1,34 @@
-// реалізація принципів ООП
+// Реалізація принципів ООП
 public abstract class Student {
 
-    // поля класу
+    // Поля класу
     protected String name;
     protected int age;
-    protected String speciatly;
+    protected String specialty;
 
-    // конструктор
-    public Student(String name, int age, String speciatly) {
+    // Конструктор
+    public Student(String name, int age, String specialty) {
         this.name = name;
         setAge(age);
-        this.speciatly = speciatly;
+        this.specialty = specialty;
     }
 
-    // метод отримання імені
+    // Метод отримання імені
     public String getName() {
         return name;
     }
 
-    // метод зміни імені
+    // Метод зміни імені
     public void setName(String name) {
         this.name = name;
     }
 
-    // метод отримання віку
+    // Метод отримання віку
     public int getAge() {
         return age;
     }
 
-    // метод зміни віку з контролем даних
+    // Метод зміни віку з перевіркою
     public void setAge(int age) {
         if (age >= 0 && age <= 100) {
             this.age = age;
@@ -37,17 +37,17 @@ public abstract class Student {
         }
     }
 
-    // метод отримання спеціальності
-    public String getSpeciatly() {
-        return speciatly;
+    // Метод отримання спеціальності
+    public String getSpecialty() {
+        return specialty;
     }
 
-    // статичний поліморфізм - перевантаження методу showInfo()
+    // Статичний поліморфізм - перевантаження методу showInfo()
 
-    // 1. Метод без параметрів
+    // Метод без параметрів
     public abstract void showInfo();
 
-    // 2. Перевантажений метод з одним параметром
+    // Перевантажений метод з одним параметром
     public void showInfo(String subject) {
         System.out.println(
                 "Студент: " + name +
@@ -55,7 +55,7 @@ public abstract class Student {
         );
     }
 
-    // 3. Перевантажений метод з двома параметрами
+    // Перевантажений метод з двома параметрами
     public void showInfo(String subject, int mark) {
         System.out.println(
                 "Студент: " + name +
